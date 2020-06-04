@@ -1,3 +1,3 @@
 # programacion_estructurada
 
-## practicas de laboratorio de programación estructurada
+## prácticas de laboratorio de programación estructurada
