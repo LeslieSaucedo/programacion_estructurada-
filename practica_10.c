@@ -1,3 +1,5 @@
+/* reformat string exercise using structs */
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
