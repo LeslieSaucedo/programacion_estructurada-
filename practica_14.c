@@ -11,7 +11,7 @@ struct student
 	char firstName[' '];
 	char firstLastName[' '];
 	char secondLastName[' '];
-	char birthDate[' '];	// dd-mm-yyyy
+	char birthDate[' '];
 	char school[' '];
 	char grade[' '];
 	char career[' '];
