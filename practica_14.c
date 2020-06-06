@@ -212,7 +212,7 @@ int main()
 	while (opcion == 1);
 	
 	printf("---------------------REPORTE---------------------\n\n");
-	for (i = 0; i < POSIBLES; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("Estudiante %i\n", i+1);
 		printf("\tMatricula: %i\n", studentList[i].studentId);
@@ -231,7 +231,7 @@ int main()
 	FILE *fp;
 	fp = fopen("estudiantes_practica.json", "w+");
 	fprintf(fp, "{\n\t\"Estudiantes\": [\n");
-	for(i = 0; i < POSIBLES; i++)
+	for(i = 0; i < n; i++)
 	{
 		fprintf(fp, "\t\t{\"Matricula\": %i, \"PrimerNombre\": \"%s\", \"PrimerApellido\": \"%s\",", studentList[i].studentId, studentList[i].firstName, studentList[i].firstLastName);
 		if (strlen(studentList[i].secondLastName) > 0)
