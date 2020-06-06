@@ -31,7 +31,7 @@ int main()
 	// Control de registro de estudiantes
 	do
 	{
-		printf("---------------------LECTURA---------------------\n\n");
+		printf("\t\t\t\t\t\t\t-REPORTE-\n\n");
 		
 		// Matricula
 		do
@@ -211,7 +211,7 @@ int main()
 	}
 	while (opcion == 1);
 	
-	printf("---------------------REPORTE---------------------\n\n");
+	printf("\t\t\t\t\t\t\t-REPORTE-\n\n");
 	for (i = 0; i < n; i++)
 	{
 		printf("Estudiante %i\n", i+1);
