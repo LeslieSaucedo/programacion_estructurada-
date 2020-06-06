@@ -42,7 +42,7 @@ int main()
 		// Matricula
 		do
 		{
-			printf("Introduzca la matrícula del estudiante: ", n+1);
+			printf("Introduzca la matrÃ­cula del estudiante: ", n+1);
 			scanf("%i", &studentId);
 			
 			valido = true;
@@ -50,14 +50,14 @@ int main()
 			if (studentId < 1)
 			{
 				valido = false;
-				printf("\n\tError: la matrícula debe ser mayor a 0\n\n");
+				printf("\n\tError: la matrÃ­cula debe ser mayor a 0\n\n");
 			}
 			else
 				for (i = 0; i < n; i++)
 					if (studentId == studentList[i].studentId)
 					{
 						valido = false;
-						printf("\n\tError: la matrícula introducida ya le pertenece a otro estudiante\n\n");
+						printf("\n\tError: la matrÃ­cula introducida ya le pertenece a otro estudiante\n\n");
 					}
 		}
 		while (!valido);
@@ -73,7 +73,7 @@ int main()
 				printf("\n\tError: introduzca un nombre\n\n");
 			else
 				if (strlen(firstName) > 32)
-					printf("\n\tError: el límite de caracteres es de 32\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(firstName) < 1 || strlen(firstName) > 32);
 		
@@ -88,7 +88,7 @@ int main()
 				printf("\n\tError: introduzca el primer apellido\n\n");
 			else
 				if (strlen(firstLastName) > 100)
-					printf("\n\tError: el límite de caracteres es de 32\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(firstLastName) < 1 || strlen(firstLastName) > 32);
 		
@@ -100,7 +100,7 @@ int main()
 			gets(secondLastName);
 			
 			if (strlen(secondLastName) > 32)
-				printf("\n\tError: el límite de caracteres es de 32\n\n");
+				printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(secondLastName) > 32);
 		
@@ -115,7 +115,7 @@ int main()
 				printf("\n\tError: introduzca la fecha de nacimiento\n\n");
 			else
 				if (strlen(birthDate) > 10)
-					printf("\n\tError: el límite de caracteres es de 10\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 10\n\n");
 				else
 					if (birthDate[2] != '/' || birthDate[5] != '/' || strlen(birthDate) != 10)
 						printf("\n\tError: la fecha de nacimiento es invalida\n\n");
@@ -133,7 +133,7 @@ int main()
 				printf("\n\tError: introduzca el nombre de la escuela\n\n");
 			else
 				if (strlen(school) > 32)
-					printf("\n\tError: el límite de caracteres es de 32\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(school) < 1 || strlen(school) > 32);
 		
@@ -148,7 +148,7 @@ int main()
 				printf("\n\tError: introduzca el grado\n\n");
 			else
 				if (strlen(grade) > 32)
-					printf("\n\tError: el límite de caracteres es de 32\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(grade) < 1 || strlen(grade) > 32);
 		
@@ -163,22 +163,22 @@ int main()
 				printf("\n\tError: introduzca la carrera\n\n");
 			else
 				if (strlen(career) > 32)
-					printf("\n\tError: el límite de caracteres es de 32\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(career) < 1 || strlen(career) > 32);
 		
 		// Genero
 		do
 		{
-			printf("Introduzca el género del estudiante: ", i+1);
+			printf("Introduzca el gÃ©nero del estudiante: ", i+1);
 			fflush(stdin);
 			gets(gender);
 			
 			if (strlen(gender) < 1)
-				printf("\n\tError: introduzca el género\n\n");
+				printf("\n\tError: introduzca el gÃ©nero\n\n");
 			else
 				if (strlen(gender) > 32)
-					printf("\n\tError: el límite de caracteres es de 32\n\n");
+					printf("\n\tError: el lÃ­mite de caracteres es de 32\n\n");
 		}
 		while (strlen(gender) < 1 || strlen(gender) > 32);
 		
@@ -213,7 +213,7 @@ int main()
 	while (opcion == 1);
 	
 	printf("---------------------REPORTE---------------------\n\n");
-	for (i = 0; i < POSIBLES; i++)
+	for (i = 0; i < n; i++)
 	{
 		printf("Estudiante %i\n", i+1);
 		printf("\tMatricula: %i\n", studentList[i].studentId);
@@ -225,7 +225,7 @@ int main()
 		printf("\tEscuela: %s\n", studentList[i].school);
 		printf("\tGrado: %s\n", studentList[i].grade);
 		printf("\tCarrera: %s\n", studentList[i].career);
-		printf("\tGénero: %s\n", studentList[i].gender);
+		printf("\tGÃ©nero: %s\n", studentList[i].gender);
 		printf("\n\n");
 	}
 	
@@ -248,5 +248,5 @@ void crearEstudiante(struct student *estudiante, int studentId, char firstName[]
 
 void saludarEstudiante(struct student *estudiante)
 {
-	printf("¡Acabas de registrar a %s!\n", estudiante->firstName);
+	printf("Â¡Acabas de registrar a %s!\n", estudiante->firstName);
 }
